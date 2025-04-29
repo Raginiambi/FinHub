@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinHub - Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="sidebar" id="sidebar">        
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Event Handling & Budgeting</a></li>
+            <li><a href="pieChart.html"><i class="fas fa-chart-bar"></i>Pie Chart</a></li>
+            <li><a href="CSV.html"><i class="fas fa-cog"></i> Export to CSV</a></li>
+            <li><a href="pdf.html"><i class="fas fa-cog"></i> Export to PDF</a></li>
+            <li><a href="report.html"><i class="fas fa-cog"></i> Download Report</a></li>
+            <li><a href="history.html"><i class="fas fa-cog"></i>Log History</a></li>
+            <li> <button onclick="logout()" id="log-btn">Logout</button> </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1 id="events-heading">Events</h1>
+        <button onclick="window.location.href='add-event.html'" id="add-btn_event">Add Event</button>
+    </div>
+    <div id="eventlist-div">
+        <h2>Event list</h2>
+       
+    <ul id="eventsList"></ul>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

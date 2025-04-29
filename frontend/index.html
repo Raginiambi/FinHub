@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinHub - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Hamburger Menu Button -->
+    <button class="menu-toggle" onclick="toggleMenu()" >
+        ☰  
+    </button>
+ 
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Event Handling & Budgeting</a></li>
+            <li><a href="pieChart.html"><i class="fas fa-chart-bar"></i>Pie Chart</a></li>
+            <li><a href="CSV.html"><i class="fas fa-cog"></i> Export to CSV</a></li>
+            <li><a href="pdf.html"><i class="fas fa-cog"></i> Export to PDF</a></li>
+            <li><a href="report.html"><i class="fas fa-cog"></i> Download Report</a></li>
+            <li><a href="history.html"><i class="fas fa-cog"></i>Log History</a></li>
+            <li> <button onclick="logout()" id="log-btn">Logout</button> </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div id="finhub-div"> 
+            <div><img src="sait img.png"  id="sait_logo"alt=""></div>
+            <h1 id="finhub_title">FinHub</h1></div>
+      
+          
+        <div id="btn-div">
+        <button class="add-btn" onclick="window.location.href='add.html'"> Add Transaction</button>
+         <input type="text" id="searchBar" placeholder="Search transactions..." onkeyup="searchTransactions()">
+        </div>
+    </div>
+    <div id="history">
+        <p class="total-balance">Total Balance: <span id="totalBalance">0</span></p>
+
+        <section class="transaction-history">
+            <h2>Transaction History</h2>
+            <!-- <p class="note"><b>Note:</b> Before adding transactions, first enter your current bank balance as a <b>Credit</b> (if you have money) or <b>Debit</b> (if you owe money). This ensures a clear transaction history.</p> -->
+
+
+            <ul class="list-group-item" id="transactionsList">
+                <!-- Transactions will be dynamically added here -->
+            </ul>
+        </section>
+    </div>
+      <!-- Notification -->
+  <div id="notification" class="notification hidden"></div>
+
+    <div class="background-container">
+        <div class="gradient-ball ball1"></div>
+        <div class="gradient-ball ball2"></div>
+        <div class="gradient-ball ball3"></div>
+      </div>
+      
+
+</body>
+</html>

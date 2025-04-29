@@ -1,0 +1,150 @@
+body {
+    background: radial-gradient(circle, black, #1A237E, #0A1931);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.sidebar {
+    width: 30vh;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: -30vh; /* Initially hidden */
+    top: 0;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .sidebar.active {
+    left: 0;
+  }
+  
+  
+  /* Hamburger Menu Button */
+  .menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    margin-top: 2.5vh;
+  }
+  .menu-toggle:hover {
+    background-color: transparent;
+  }
+  .menu-toggle:focus {
+    outline: none;
+  }
+  
+  /* Menu Items */
+  .sidebar .menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar .menu li {
+    padding-top: 5vh;
+    /* margin-top: 8vh; */
+    padding-left: 2vh;
+  }
+  
+  
+  .sidebar .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  .sidebar .menu a:hover{
+      color:#044a94;
+  }
+  
+  .sidebar .menu a i {
+    margin-right: 10px;
+  }
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E3A8A;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin:0;
+    font-size: 22px;
+    color: white;
+}
+
+.add-button {
+    background-color: #007BFF;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+.transactions-list {
+    margin-top: 5vh;
+    list-style-type: none;
+    padding: 0;
+}
+
+.transactions-list li {
+    font-size: 18px;
+    /* padding: 5px 0; */
+    margin-top: 6vh;
+    background-color: #3c5987;
+    height: 7vh;
+    width:70vh;
+    border-radius: 1.5vh;
+    text-align: center;
+    line-height: 7vh;
+}
+#heading{
+    font-size: 5vh;
+}
+#event-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.balance {
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+#log-btn{
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+  padding: 0;
+  padding-left: 1.5vh;
+}
+#log-btn:hover{
+  color:#044a94;
+}

@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2 id="event-name"></h2>
+            <button class="add-button" onclick="window.location.href='add-event-transaction.html'">Add</button>
+        </div>
+
+        <ul class="transactions-list" id="transactions"></ul>
+
+        <p class="balance">Current Balance - $<span id="current-balance"></span></p>
+    </div>
+
+    <script src="event.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()" >
+        ☰
+    </button>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Event Handling & Budgeting</a></li>
+            <li><a href="pieChart.html"><i class="fas fa-chart-bar"></i>Pie Chart</a></li>
+            <li><a href="CSV.html"><i class="fas fa-cog"></i> Export to CSV</a></li>
+            <li><a href="pdf.html"><i class="fas fa-cog"></i> Export to PDF</a></li>
+            <li><a href="report.html"><i class="fas fa-cog"></i> Download Report</a></li>
+            <li><a href="history.html"><i class="fas fa-cog"></i>Log History</a></li>
+            <li> <button onclick="logout()" id="log-btn">Logout</button> </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h2 id="event-name"></h2>
+            <button class="add-button" id="add-event-transaction-btn" onclick="window.location.href='add-event-transaction.html'">Add Transaction</button>
+        </div>
+     <div id="event-div">  
+        <h2 id="heading"> Transaction History</h2>
+        <!-- ✅ New Event Budgeting Section -->
+        <!-- <p>Budget: <span id="event-budget"></span></p>
+        <p>Allocated: <span id="event-allocated"></span></p>
+        <p>Remaining: <span id="event-remaining"></span></p> -->
+
+        <ul class="transactions-list" id="transactions"></ul>
+
+        <p class="balance">Current Balance - <span id="current-balance"></span></p>
+    </div>
+</div> 
+
+    <script src="event.js"></script>
+</body>
+</html>

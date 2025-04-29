@@ -1,0 +1,135 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinHub - Finance Breakdown</title>
+    <link rel="stylesheet" href="style1.css">   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+         
+</head>
+<body>
+ Hamburger Menu Button
+ <button class="menu-toggle" onclick="toggleMenu()">
+    ☰
+</button>
+
+
+ Sidebar Menu 
+<div class="sidebar" id="sidebar">
+    <ul class="menu">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Event Handling & Budgeting</a></li>
+        <li><a href="pieChart.html"><i class="fas fa-chart-bar"></i>Pie Chart</a></li>
+        <li><a href="CSV.html"><i class="fas fa-cog"></i> Export to CSV</a></li>
+        <li><a href="pdf.html"><i class="fas fa-cog"></i> Export to PDF</a></li>
+        <li><a href="report.html"><i class="fas fa-cog"></i> Download Report</a></li>
+        <li> <button onclick="logout()" id="log-btn">Logout</button> </li>
+    </ul>
+</div>
+
+<div id="piechart_3d" style="width: 100%; height: 500px;"></div>
+
+
+ Main Content 
+<div class="main-content">
+    <h1 id="finhub-title">FinHub</h1>
+    <button class="add-btn" onclick="window.location.href='add.html'"> Add Transaction</button>
+</div>
+
+        <div id="container">
+            <div id="info-container">
+                <h2>📊 Finance-Breakdown</h2>
+                <ul id="info-list"></ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <div id="pie-chart-wrapper">
+            <canvas id="financeChart"></canvas>
+        </div>
+    </div>
+    
+
+    <div class="background-container">
+        <div class="gradient-ball ball1"></div>
+        <div class="gradient-ball ball2"></div>
+        <div class="gradient-ball ball3"></div>
+      </div>
+
+    <footer>
+        <div id="footer-container">
+            <p>&copy; 2025 FinHub | SAIT</p>
+        </div>
+    </footer>
+    <script src="script1.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FinHub - Finance Breakdown</title>
+    <link rel="stylesheet" href="style1.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Event Handling & Budgeting</a></li>
+            <li><a href="pieChart.html"><i class="fas fa-chart-bar"></i>Pie Chart</a></li>
+            <li><a href="CSV.html"><i class="fas fa-cog"></i> Export to CSV</a></li>
+            <li><a href="pdf.html"><i class="fas fa-cog"></i> Export to PDF</a></li>
+            <li><a href="report.html"><i class="fas fa-cog"></i> Download Report</a></li>
+            <li><a href="history.html"><i class="fas fa-cog"></i>Log History</a></li>
+            <li> <button onclick="logout()" id="log-btn">Logout</button> </li>
+        </ul>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-content">
+        <h1 id="finhub-title">FinHub</h1>
+        <button class="add-btn" onclick="window.location.href='add.html'">Add Transaction</button>
+    </div>
+
+    <!-- Finance Breakdown Section -->
+    <div id="container">
+        <div id="info-container">
+            <h2>📊 Finance-Breakdown</h2>
+            <ul id="info-list"></ul>
+        </div>
+    </div>
+
+    <!-- Chart Container -->
+    <div class="content-container">
+        <div id="pie-chart-wrapper">
+            <canvas id="financeChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Background -->
+    <div class="background-container">
+        <div class="gradient-ball ball1"></div>
+        <div class="gradient-ball ball2"></div>
+        <div class="gradient-ball ball3"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div id="footer-container">
+            <p>&copy; 2025 FinHub | SAIT</p>
+        </div>
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
+</html>

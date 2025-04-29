@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Pie Chart with Three.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    <style>
+        body { margin: 0; background-color: #0A1931; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const colors = [0xff476f, 0x32e0c4, 0xffd60a, 0x57007e];
+        const data = [45.7, 20, 18.3, 16]; // Percentage values
+        const total = data.reduce((a, b) => a + b, 0);
+        
+        let startAngle = 0;
+        const radius = 3;
+        const height = 1;
+        
+        data.forEach((value, index) => {
+            const angle = (value / total) * Math.PI * 2;
+            
+            const shape = new THREE.Shape();
+            shape.moveTo(0, 0);
+            shape.arc(0, 0, radius, startAngle, startAngle + angle, false);
+            shape.lineTo(0, 0);
+            
+            const extrudeSettings = { depth: height, bevelEnabled: false };
+            const geometry = new THREE.ExtrudeGeometry(shape, extrudeSettings);
+            const material = new THREE.MeshStandardMaterial({ color: colors[index], metalness: 0.5, roughness: 0.7 });
+            
+            const mesh = new THREE.Mesh(geometry, material);
+            mesh.rotation.x = -Math.PI / 2;
+            scene.add(mesh);
+            
+            startAngle += angle;
+        });
+
+        const light = new THREE.PointLight(0xffffff, 1, 100);
+        light.position.set(10, 10, 10);
+        scene.add(light);
+        
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        camera.position.set(0, 5, 5);
+        controls.update();
+
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener("resize", () => {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        });
+    </script>
+</body>
+</html>

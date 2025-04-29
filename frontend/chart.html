@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Pie Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #0c1b3c;
+            text-align: center;
+            color: white;
+        }
+        canvas {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+
+        const myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["Club Revenue", "Technical Expenses", "Non-Technical Expenses", "Additional Expenses"],
+                datasets: [{
+                    data: [30, 20, 15, 35], // Adjust values based on your data
+                    backgroundColor: ["#2ef5c1", "#6f2bf4", "#fff86a", "#ea20a2"],
+                    borderColor: "#0c1b3c",
+                    borderWidth: 3,
+                }]
+            },
+            options: {
+                responsive: true,
+                cutout: "50%", // Creates a donut effect
+                plugins: {
+                    legend: {
+                        labels: { color: "white" } // Legend color
+                    }
+                },
+                animation: {
+                    animateScale: true, // Smooth animation
+                    animateRotate: true
+                }
+            }
+        });
+
+        // Adding a 3D Shadow Effect (Custom Plugin)
+        Chart.plugins.register({
+            beforeDraw: function(chart) {
+                let ctx = chart.chart.ctx;
+                ctx.save();
+                ctx.shadowColor = "rgba(0,0,0,0.5)";
+                ctx.shadowBlur = 10;
+                ctx.shadowOffsetX = 4;
+                ctx.shadowOffsetY = 4;
+                ctx.restore();
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User History</title>
+  <link rel="stylesheet" href="historystyle.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <button class="menu-toggle" onclick="toggleMenu()" >
+        ☰  
+    </button>
+ 
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <ul class="menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Event Handling & Budgeting</a></li>
+            <li><a href="pieChart.html"><i class="fas fa-chart-bar"></i>Pie Chart</a></li>
+            <li><a href="CSV.html"><i class="fas fa-cog"></i> Export to CSV</a></li>
+            <li><a href="pdf.html"><i class="fas fa-cog"></i> Export to PDF</a></li>
+            <li><a href="report.html"><i class="fas fa-cog"></i> Download Report</a></li>
+            <li><a href="history.html"><i class="fas fa-cog"></i>Log History</a></li>
+            <li> <button onclick="logout()" id="log-btn">Logout</button> </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div id="finhub-div"> 
+            <div><img src="sait img.png"  id="sait_logo"alt=""></div>
+            <h1 id="finhub_title">FinHub</h1></div>
+    </div>
+    <div class="container">
+        <h1>User History Dashboard ⏳</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>History</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="history-data">
+                <!-- Dynamic rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="background-container">
+        <div class="gradient-ball ball1"></div>
+        <div class="gradient-ball ball2"></div>
+        <div class="gradient-ball ball3"></div>
+    </div>
+  
+    <script src="historyscript.js"></script> <!-- Link to external JS -->
+</body>
+</html>

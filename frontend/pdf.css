@@ -1,0 +1,383 @@
+/* Reset some defaults */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body with smooth gradient background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at 30% 30%, #007bff, #003366);
+    background-size: 400% 400%;
+    animation: gradientMotion 10s infinite alternate;
+    color: white;
+    animation: gradientMove 10s ease infinite;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+@keyframes gradientMotion {
+    0% {
+        background: radial-gradient(circle at 30% 30%, #007bff, #003366);
+    }
+    50% {
+        background: radial-gradient(circle at 70% 70%, #0056b3, #001f4d);
+    }
+    100% {
+        background: radial-gradient(circle at 50% 50%, #007bff, #003366);
+    }
+}
+
+
+/* Header styling */
+header {
+    padding: 20px;
+    background: transparent;
+    z-index: 2;
+    position: relative;
+}
+
+/* Title and buttons */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.finhub-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.add-btn {
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #0097a7;
+}
+
+/* Info Section */
+#info-container {
+    margin-top: 20px;
+}
+
+#info-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+
+
+/* Background gradient balls */
+.background-container {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.gradient-ball {
+    position: absolute;
+    width: 200px;  /* Adjust size */
+    height: 200px; /* Adjust size */
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.7;
+    animation: floatBall 10s infinite alternate ease-in-out;
+  }
+
+  @keyframes float1 {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-40px, 50px); }
+    100% { transform: translate(30px, -40px); }
+  }
+  
+  @keyframes float2 {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(60px, -30px); }
+    100% { transform: translate(-50px, 40px); }
+  }
+  
+  @keyframes float3 {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-30px, 40px); }
+    100% { transform: translate(40px, -30px); }
+  }
+ /* Title */
+  .finhub-title {
+    position: fixed;
+    top: 19px;
+    left: 65px;
+    font-size: 27px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+
+  /* Ball 1 */
+   .ball1 {
+    background: radial-gradient(circle, #00c6ff, #0072ff);
+    width: 250px;
+    height: 250px;
+    top: 10%;
+    left: 15%;
+    animation: float1 4s infinite alternate ease-in-out;
+  }
+  
+  /* Ball 2 */
+  .ball2 {
+    background: radial-gradient(circle, #00c6ff, #0072ff);
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 60%;
+    animation: float2 6s infinite alternate ease-in-out;
+  }
+  
+  /* Ball 3 */
+  .ball3 {
+    background: radial-gradient(circle, #00c6ff, #0072ff);
+    width: 220px;
+    height: 220px;
+    top: 70%;
+    left: 30%;
+    animation: float3 8s infinite alternate ease-in-out;
+  }
+
+  /* Gradient Animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Gradient on body */
+body {
+    background: linear-gradient(-45deg, #395fa5, #0e2f68, #021c4d);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+/* ✅ Export Section Styling */
+.export-section {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px 60px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 25px rgba(0, 188, 212, 0.4);
+    animation: glowUp 6s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+.export-section h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.export-section button {
+    background-color: #00bcd4;
+    color: white;
+    padding: 14px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+}
+
+.export-section button:hover {
+    background-color: #0097a7;
+    transform: scale(1.05);
+}
+
+@keyframes glowUp {
+    from {
+        box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+    }
+    to {
+        box-shadow: 0 0 40px rgba(0, 188, 212, 0.6);
+    }
+}
+
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    background: #000739;
+    color: white;
+    text-align: center;
+    padding: 4px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#footer-container {
+    width: 100%;
+    padding: 4px 0;
+}
+
+.sidebar.active {
+    left: 0;
+  }
+  
+  #finhub-div{
+    position: fixed;
+    margin-left: 5vh;
+    margin-top: -2vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  #finhub_title{
+    margin-left: 0%;
+  }
+  .sidebar .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar .menu li {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .sidebar .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar .menu a i {
+    margin-right: 10px;
+  }
+  
+  .sidebar {
+    width: 30vh;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: -30vh;
+    top: 0;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    padding-top: 10vh;
+  }
+  
+  .sidebar.active {
+    left: 0;
+  }
+  
+  
+  /* Hamburger Menu Button */
+  .menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 28px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  .menu-toggle:hover {
+    background-color: transparent;
+  }
+  .menu-toggle:focus {
+    outline: none;
+  }
+  
+  
+  /* Menu Items */
+  .sidebar .menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar .menu li {
+    padding-top: 5vh;
+    /* margin-top: 8vh; */
+    padding-left: 2vh;
+  }
+  
+  
+  .sidebar .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  .sidebar .menu a:hover{
+      color:#044a94;
+  }
+  
+  .sidebar .menu a i {
+    margin-right: 10px;
+  }
+  
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height:6vh;
+    line-height: 3vh;
+    margin-top: 4.3vh;
+    
+    
+  }
+  #sait_logo{
+    height:6vh;
+    width:5vh;
+    margin-top: 0%;
+    filter: drop-shadow(0 0 10px #0672f7);
+  }
+  #log-btn{
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+    padding: 0;
+    padding-left: 1.5vh;
+    color: white;
+    border: 0vh;
+  }
+  #log-btn:hover{
+    color:#044a94;
+  }

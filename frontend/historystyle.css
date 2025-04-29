@@ -1,0 +1,441 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #496caf, #0e2f68, #001742);
+  background-size: 400% 400%;
+  height: 100vh;
+  animation: gradientMove 10s ease infinite;
+  color: white;
+}
+#log-btn {
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+  padding: 0;
+  color: white;
+  padding-left: 1.5vh;
+}
+#log-btn:hover {
+  color: #044a94;
+}
+
+.container h1 {
+  font-size: 26px; /* Adjust the font size for the table title */
+  color: #d5e0e2; /* Set a color similar to the table header */
+  text-align: center; /* Center the title */
+  text-shadow: 2px 2px 5px rgb(52, 55, 54); /* Add a subtle shadow with blue */
+  margin: 19px auto; /* Reduced margin for closer spacing */
+  text-transform: uppercase; /* Capitalize the title */
+  font-family: "Arial", sans-serif; /* Clean, simple font */
+  font-weight: bold; /* Make the title bold */
+}
+
+/* Centered Table Styling */
+table {
+  width: 72.7%;
+  border-collapse: separate; /* Ensure borders are not collapsed */
+  border-spacing: 0; /* Remove spacing between cells */
+  margin: 49px auto; /* ✅ centers the table horizontally */
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent white background */
+  color: white; /* White text color */
+  font-family: "Arial", sans-serif;
+  border-style: solid;
+  border-radius: 15px; /* Add rounded corners to the table */
+  overflow: hidden; /* Ensure content doesn't spill out of the rounded corners */
+}
+/* Table Header Styling */
+th {
+  padding: 13px 27px;
+  text-align: center;
+  font-size: 18.6px;
+  background-color: #28a745; /* stronger color */
+  color: white;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  border-right: 2px solid #ffffff; /* ✅ solid column border */
+}
+
+/* Table Data Styling */
+td {
+  padding: 12px 20px;
+  font-size: 15.8px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  background-color: rgba(50, 50, 50, 0.8); /* dark but readable */
+  color: white;
+  vertical-align: middle;
+  border-right: 2px solid #ffffff; /* ✅ solid column border */
+}
+
+/* Alternate Row Styling */
+tr:nth-child(even) td {
+  background-color: rgba(
+    106,
+    105,
+    105,
+    0.369
+  ); /* Slightly transparent background for even rows */
+}
+
+tr:nth-child(odd) td {
+  background-color: rgba(
+    106,
+    105,
+    105,
+    0.369
+  ); /* Slightly transparent background for odd rows */
+}
+
+/* Hover Effect on Table Rows */
+tr:hover td {
+  background-color: rgba(
+    172,
+    170,
+    170,
+    0.501
+  ); /* Slightly transparent hover effect */
+}
+
+/* Border Removal from Table, Header, and Data Cells */
+table,
+th,
+td {
+  border: none;
+}
+
+/* Remove left border from first column */
+td:first-child {
+  border-left: none;
+}
+
+/* Remove right border from last column */
+td:last-child {
+  border-right: none;
+}
+
+/* Enhanced Hover Animation for Table Rows */
+tr {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+tr:hover {
+  transform: scale(1.02); /* Slight zoom effect */
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.134); /* Soft glowing shadow */
+}
+
+tr:hover td {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.15
+  ); /* Lightened background on hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Toggle & Title Buttons */
+.menu-toggle {
+  position: fixed;
+  top: 26px;
+  left: 17px;
+  font-size: 24px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+#finhub-title {
+  position: fixed;
+  top: 12px;
+  left: 60px;
+  font-size: 27px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-toggle:focus,
+.add-btn:focus {
+  outline: none;
+}
+
+/* Sidebar Menu */
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar .menu li {
+  padding-top: 6vh;
+  padding-left: 2vh;
+}
+
+.sidebar .menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .menu a:hover {
+  color: #044a94;
+}
+
+.sidebar .menu a i {
+  margin-right: 10px;
+}
+
+/* Add Button */
+.add-btn {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  font-size: 16px;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  background: #218838;
+  transform: scale(1.03);
+}
+
+/* Footer Styling */
+footer {
+  width: 100%;
+  background: #020039;
+  color: white;
+  text-align: center;
+  padding: 4px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#footer-container {
+  width: 100%;
+  padding: 3px 0;
+}
+
+/* Background Gradient Balls */
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.gradient-ball {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.7;
+  animation: floatBall 10s infinite alternate ease-in-out;
+}
+
+@keyframes float1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(80px, 10px);
+  }
+  100% {
+    transform: translate(10px, 80px);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-60px, 30px);
+  }
+  100% {
+    transform: translate(30px, 60px);
+  }
+}
+
+@keyframes float3 {
+  0% {
+    transform: translate(0, 100);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(10px, 100px);
+  }
+}
+
+.ball1 {
+  background: radial-gradient(circle, #0084ff, #0961ce);
+  width: 250px;
+  height: 250px;
+  top: 10%;
+  left: 15%;
+  animation: float1 7s infinite alternate ease-in-out;
+}
+
+.ball2 {
+  background: radial-gradient(circle, #02a5d2, #0072ff);
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 60%;
+  animation: float2 8s infinite alternate ease-in-out;
+}
+
+.ball3 {
+  background: radial-gradient(circle, #007bff, #0072ff);
+  width: 220px;
+  height: 220px;
+  top: 70%;
+  left: 30%;
+  animation: float3 9s infinite alternate ease-in-out;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+#finhub-div {
+  position: fixed;
+  margin-left: 5vh;
+  margin-top: -2vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#finhub_title {
+  margin-left: 0%;
+}
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .menu li {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .menu a i {
+  margin-right: 10px;
+}
+
+.sidebar {
+  width: 30vh;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: -30vh;
+  top: 0;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  padding-top: 10vh;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 28px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+.menu-toggle:hover {
+  background-color: transparent;
+}
+.menu-toggle:focus {
+  outline: none;
+}
+
+/* Menu Items */
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar .menu li {
+  padding-top: 5vh;
+  /* margin-top: 8vh; */
+  padding-left: 2vh;
+}
+.sidebar .menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.sidebar .menu a:hover {
+  color: #044a94;
+}
+
+.sidebar .menu a i {
+  margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  line-height: 3vh;
+  margin-top: 4.3vh;
+}
+#sait_logo {
+  height: 6vh;
+  width: 5vh;
+  margin-top: 0%;
+  filter: drop-shadow(0 0 10px #0672f7);
+}
+#log-btn {
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+  padding: 0;
+  padding-left: 1.5vh;
+  color: white;
+  border: 0vh;
+}
+#log-btn:hover {
+  color: #044a94;
+}

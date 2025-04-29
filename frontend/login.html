@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FinHub Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body class="dark-theme">
+  <div class="login-container">
+    <div id="title-container">  
+    <img src="sait img.png"  id="sait_logo"alt="">
+    <h2 id="login-title">FinHub Login</h2>
+  </div>
+   
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button onclick="sendLogin()">Send OTP</button>
+
+    <div id="otp-section" style="display: none;">
+      <input type="text" id="otp" placeholder="Enter OTP" />
+      <button onclick="verifyOtp()">Verify OTP</button>
+    </div>
+  </div>
+
+  <div class="background-container">
+    <div class="gradient-ball ball1"></div>
+    <div class="gradient-ball ball2"></div>
+    <div class="gradient-ball ball3"></div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

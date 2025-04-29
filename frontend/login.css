@@ -1,0 +1,138 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #496caf, #0e2f68, #001742);
+  background-size: 400% 400%;
+ 
+  animation: gradientMove 10s ease infinite;
+  color: white;
+  
+}
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Send it behind content 
+  overflow: hidden;*/
+}
+.gradient-ball {
+  position: absolute;
+  width: 200px;  /* Adjust size */
+  height: 200px; /* Adjust size */
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.7;
+  animation: floatBall 10s infinite alternate ease-in-out;
+}
+
+@keyframes float1 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(80px, 10px); }
+  100% { transform: translate(10px, 80px); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-60px, 30px); }
+  100% { transform: translate(30px, 60px); }
+}
+
+@keyframes float3 {
+  0% { transform: translate(0, 100); }
+  50% { transform: translate(10px, -10px); }
+  100% { transform: translate(10px, 100px); }
+}
+.ball1 {
+  background: radial-gradient(circle, #0084ff, #0961ce);
+  width: 250px;
+  height: 250px;
+  top: 10%;
+  left: 15%;
+  animation: float1 7s infinite alternate ease-in-out;
+}
+
+/* Ball 2 */
+.ball2 {
+  background: radial-gradient(circle, #02a5d2, #0072ff);
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 60%;
+  animation: float2 8s infinite alternate ease-in-out;
+}
+
+/* Ball 3 */
+.ball3 {
+  background: radial-gradient(circle, #007bff, #0072ff);
+  width: 220px;
+  height: 220px;
+  top: 70%;
+  left: 30%;
+  animation: float3 9s infinite alternate ease-in-out;
+}
+
+/* body.dark-theme {
+    background-color: #1660e0;
+    color: white;
+    font-family: Arial, sans-serif;
+  } */
+  
+  .login-container {
+    max-width: 350px;
+    margin: 100px auto;
+    padding: 2rem;
+    height:57vh;
+    background: #053c6c;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+
+  #login-title{
+    text-align: center;
+  }
+  
+  input {
+    width: 93%;
+    margin: 13px 0;
+    padding: 13px;
+    background: #001742;
+    color: white;
+    border: none;
+    border-radius: 8px;
+  }
+  #email{
+    margin-top: 5vh;
+  }
+  button {
+    width: 49%;
+    margin-left: 12vh;
+    margin-top: 4vh;
+    height:5.5vh;
+    padding: 10px;
+    background-color: #032447;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  button:hover{
+    border-color: #02a5d2;
+    background-color:  #07c3f7;
+    color:black;
+  }
+
+  #sait_logo{
+    height:6vh;
+    width:5vh;
+    margin-top: 0%;
+    filter: drop-shadow(0 0 10px #0672f7);
+  }
+  #title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
