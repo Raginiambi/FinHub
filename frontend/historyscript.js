@@ -1,5 +1,5 @@
 // Fetch user history data from the backend
-fetch('http://localhost:5000/api/history')  // Change URL as per your API
+fetch('http://localhost:8080/api/history')  // Change URL as per your API
   .then(response => response.json())
   .then(data => {
     // Format the data (if needed)

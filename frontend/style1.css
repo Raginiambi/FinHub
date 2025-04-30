@@ -473,3 +473,40 @@ body {
 #log-btn:hover{
   color:#044a94;
 }
+
+/* === Mobile View Tweaks === */
+@media only screen and (max-width: 768px) {
+  /* Hide the Add Transaction Button on Mobile */
+  .add-btn {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* (existing rules…) */
+
+  /* Hide the FinHub title */
+  #finhub-title {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* Make sure the header area (logo + add-btn) has some bottom spacing */
+  .main-content {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Reflow the Finance-Breakdown panel */
+  #info-container {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 0 auto 1.5rem;    /* center it and push it down */
+    width: 90%;
+    max-width: 320px;
+    margin-top: 10%;
+  }
+}

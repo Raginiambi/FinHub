@@ -1,31 +1,37 @@
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(-45deg, #496caf, #0e2f68, #001742);
   background-size: 400% 400%;
- 
   animation: gradientMove 10s ease infinite;
   color: white;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .background-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1; /* Send it behind content 
-  overflow: hidden;*/
+  z-index: -1;
 }
+
 .gradient-ball {
   position: absolute;
-  width: 200px;  /* Adjust size */
-  height: 200px; /* Adjust size */
   border-radius: 50%;
   filter: blur(40px);
   opacity: 0.7;
-  animation: floatBall 10s infinite alternate ease-in-out;
 }
 
 @keyframes float1 {
@@ -45,6 +51,7 @@ body {
   50% { transform: translate(10px, -10px); }
   100% { transform: translate(10px, 100px); }
 }
+
 .ball1 {
   background: radial-gradient(circle, #0084ff, #0961ce);
   width: 250px;
@@ -54,7 +61,6 @@ body {
   animation: float1 7s infinite alternate ease-in-out;
 }
 
-/* Ball 2 */
 .ball2 {
   background: radial-gradient(circle, #02a5d2, #0072ff);
   width: 300px;
@@ -64,7 +70,6 @@ body {
   animation: float2 8s infinite alternate ease-in-out;
 }
 
-/* Ball 3 */
 .ball3 {
   background: radial-gradient(circle, #007bff, #0072ff);
   width: 220px;
@@ -74,65 +79,135 @@ body {
   animation: float3 9s infinite alternate ease-in-out;
 }
 
-/* body.dark-theme {
-    background-color: #1660e0;
-    color: white;
-    font-family: Arial, sans-serif;
-  } */
-  
-  .login-container {
-    max-width: 350px;
-    margin: 100px auto;
-    padding: 2rem;
-    height:57vh;
-    background: #053c6c;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+/* ✅ FIXED & CENTERED LOGIN CONTAINER */
+.login-container {
+  width: 350px;
+  max-width: 350px;
+  padding: 2rem;
+  background: #053c6c;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-title {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  margin: 13px 0;
+  padding: 13px;
+  background: #001742;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+#email {
+  margin-top: 20px;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  height: 45px;
+  padding: 10px;
+  background-color: #032447;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: #02a5d2;
+  background-color: #07c3f7;
+  color: black;
+}
+
+#sait_logo {
+  height: 6vh;
+  width: 5vh;
+  filter: drop-shadow(0 0 10px #0672f7);
+}
+
+#title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Only background animation balls respond to screen size */
+/* Tablet */
+@media (max-width: 768px) {
+  .ball1 {
+    width: 160px;
+    height: 160px;
+    top: 5%;
+    left: 5%;
   }
 
-  #login-title{
-    text-align: center;
-  }
-  
-  input {
-    width: 93%;
-    margin: 13px 0;
-    padding: 13px;
-    background: #001742;
-    color: white;
-    border: none;
-    border-radius: 8px;
-  }
-  #email{
-    margin-top: 5vh;
-  }
-  button {
-    width: 49%;
-    margin-left: 12vh;
-    margin-top: 4vh;
-    height:5.5vh;
-    padding: 10px;
-    background-color: #032447;
-    border: none;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
+  .ball2 {
+    width: 180px;
+    height: 180px;
+    top: 45%;
+    left: 55%;
   }
 
-  button:hover{
-    border-color: #02a5d2;
-    background-color:  #07c3f7;
-    color:black;
+  .ball3 {
+    width: 160px;
+    height: 160px;
+    top: 70%;
+    left: 30%;
   }
 
-  #sait_logo{
-    height:6vh;
-    width:5vh;
-    margin-top: 0%;
-    filter: drop-shadow(0 0 10px #0672f7);
+  #sait_logo {
+    height: 5vh;
+    width: 5vh;
   }
-  #title-container{
-    display: flex;
-    justify-content: center;
+
+  #title-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .ball1 {
+    width: 120px;
+    height: 120px;
+    top: 2%;
+    left: 5%;
+  }
+
+  .ball2 {
+    width: 130px;
+    height: 130px;
+    top: 35%;
+    left: 50%;
+  }
+
+  .ball3 {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    left: 25%;
+  }
+
+  #sait_logo {
+    height: 4vh;
+    width: 4vh;
+  }
+
+  #title-container {
+    flex-direction: column;
     align-items: center;
+    gap: 8px;
   }
+}
