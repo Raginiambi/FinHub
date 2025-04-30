@@ -62,6 +62,11 @@ const transporter = nodemailer.createTransport({
 
 });
 
+app.get('/', (req, res) => {
+    res.send('✅ FinHub backend is live!');
+  });
+  
+
 app.get('/download-pdf-report', async (req, res) => {
     const { period } = req.query;
     let startDate, endDate;
