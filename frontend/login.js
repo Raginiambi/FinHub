@@ -5,7 +5,7 @@ function sendLogin() {
   const password = document.getElementById('password').value;
   loginEmail = email;
 
-  fetch('http://localhost:10000/auth/login', {
+  fetch('https://finhub-0eon.onrender.com/auth/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password })
@@ -27,7 +27,7 @@ function sendLogin() {
 function verifyOtp() {
   const otp = document.getElementById('otp').value;
 
-  fetch('http://localhost:10000/auth/verify-otp', {
+  fetch('https://finhub-0eon.onrender.com/auth/verify-otp', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email: loginEmail, otp })
