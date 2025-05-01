@@ -26,6 +26,14 @@ app.use(session({
   }
 }));
 
+const pool = mysql.createPool({
+    host: 'shortline.proxy.rlwy.net',
+    user: 'root',
+    password: 'SYbiDeCcGEGswBETPEXPRHOTzeMMgyZN',
+    database: 'railway',
+    port: 53640
+  });
+
 app.use(express.static(path.join(__dirname, '../frontend')));
 app.use('/api', historyRoutes);
 app.get("/", (req, res) => {
